@@ -1,0 +1,41 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: new-hospital
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    format-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/new_hospital_db
+    username: postgres
+    password: 123@admin
+    initialization-mode: always
+    platform: postgres
+
+#apps:
+#  id:
+#    algorithm: HmacSHA512
+#    length-bytes: 128
+#  secret:
+#    algorithm: HmacSHA512
+#    lengthA-bytes: 96
+#    lengthB-bytes: 56
+#  api-key:
+#    length: 40
+#  encryption:
+#    secret: ABCD
+#    iv: 1234
+#    algorithm: AES
+#    cipher:
+#      algorithm: AES/CBC/PKCS5PADDING
+#
+#endpoints:
+#  service:
+#    auth: http://localhost:8080/auth
